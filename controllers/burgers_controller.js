@@ -2,7 +2,7 @@ const express = require("express");
 // Import burger module to access database function
 const burger = require("../models/burger.js");
 
-var router = express.Router();
+const router = express.Router();
 
 // create all routers and set up logic
 
