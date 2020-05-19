@@ -1,7 +1,7 @@
 # burger
 ![GitHub issues](https://img.shields.io/github/issues/vasavi245/week12_Employee-Tracker)
   ## Description
-In this application is used to build a burger logger using MySQL,node,express,Handlebars and orm in mvc design pattern
+This application is used to build a burger logger using MySQL,node,express,Handlebars and orm in mvc design pattern
  ## Demo
  ![burger](https://user-images.githubusercontent.com/58574509/82294820-50c4fd80-99e1-11ea-8861-a574f53ec1df.gif)
   ## Table of Contents
