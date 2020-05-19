@@ -13,9 +13,10 @@ In this application is used to build a burger logger using MySQL,node,express,Ha
   6. [Questions](#Questions)
   ## Installation
   To install necessary dependencies, run the following commands:
-  * npm install
-  * npm i inquirer
-  * npm i mysql
+  * npm init
+  * npm install express
+  * npm install mysql
+  * npm install express-handlebars
   ## Usage
   Below are the screen shot of the running application
   ![burger screenshot](https://user-images.githubusercontent.com/58574509/82295142-e1034280-99e1-11ea-9a2f-3be963206387.PNG)
@@ -29,3 +30,4 @@ In this application is used to build a burger logger using MySQL,node,express,Ha
   ## Questions
   * <img src="https://avatars0.githubusercontent.com/u/58574509?v=4" alt="avatar" style="border-radius: 16px" width="150" />
   If you have any questions about the repo, open an issue or contact [vasavi245](https://api.github.com/users/vasavi245) directly at r.vasavi04@gmail.com
+  ## Links
