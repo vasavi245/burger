@@ -1,9 +1,45 @@
 <main>
     <div id = "heading">
-        <img id = "burger-image" src="C:\Users\rvasa\Documents\trail-express\burger-thumbnail.jpg" alt = "burger" />
-        <h1>Eat-Da-Burger</h1>
+        <img id = "burger-image" src="assets/img/burger-thumbnail.jpg" alt = "burger" />
+        <h1>Eat-Da-Burger!</h1>
+        <p>Enter Your Favourite Burger to eat!</p>
     </div>
+    <div class = "container">
+        <form class="create-form">
+            <input type="text" id="burg" name="name" placeholder="Burger Name">
+            <button type = "submit" class="submit-button">Add Burger</button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Burgers Ready T0 Eat!</h2>
 
-    <h1></h1>
+            <ul>
+                {{#each burger}}
+                {{#unless devoured}}
+                <li>
+                    <button class="eatBtn" id="{{id}}">Devour It!</button>
+                    {{burger_name}}
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col">
+            <h2>Burgers Gone From Dis World!</h2>
+
+            <ul>
+                {{#each burger}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                    <button class="delete-burger" data-id={{id}}>DELETE!</button>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div>
 </main> 
 

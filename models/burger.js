@@ -1,12 +1,12 @@
-const orm = require("./config/orm.js");
+const orm = require("../config/orm.js");
 var burger = {
     selectAll: function(callback) {
         orm.selectAll("burgers", function(res){
             callback(res);
         });
     },
-    insertOne: function(col, val, callback){
-        orm.insertOne("burgers", col, val, function(res){
+    insertOne: function(val, callback){
+        orm.insertOne("burgers", "burger_name", val, function(res){
          callback(res);
         });
     },
@@ -15,5 +15,11 @@ var burger = {
             callback(res);
         });
     },
+    deleteOne: function(condition, callback) {
+        orm.deleteOne("burgers", condition, function(res) {
+          callback(res);
+        });
+      }
+    
 };
 module.exports = burger;

@@ -9,7 +9,7 @@ body {
     height: 250px;
     border: solid 3px greenyellow;
 }
-h1{
+h1,h2{
     color: white;
 }
 
@@ -18,9 +18,14 @@ h1{
     width: 30%;
     padding: 10px;
 }
+p {
+    text-align: center;
+    color: #ccc;
+    font-size: 30px;
+}
 .submit-button {
     background-color: green;
-    width: 100%;
+    width: 75%;
     padding: 14px 20px;
     cursor: pointer;
     margin: 8px 0;
@@ -38,4 +43,51 @@ h1{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+.row {
+    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px 100px;
+}
+.col {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    border: solid 3px gold;
+    border-radius: 1rem;
+    background-color: lightgreen;
+    padding: 0px 0 10px 30px;
+    box-shadow: 0 0 10px rgb(58, 56, 56);
+    font-size: 20px;
+}
+.eatBtn {
+    font-size: 15px;
+    background-color: #058321;
+    color: white;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    margin:auto;
+}
+.delete-burger {
+    font-size: 15px;
+    background-color: #e0343d;
+    color: white;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    margin:auto;
+}
+.eatBtn:hover {
+    padding-right: 25px;
+}
+.delete-burger:hover {
+    opacity:2;
 }

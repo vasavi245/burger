@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <title>Eat-Da-Burger</title>
     <link rel="stylesheet" type="text/css" href="assets/css/burger_style.css">
 </head>
 <body>
-    {{ body }}
+    {{{ body }}}
     <script>
         $(function () {
             $(".create-form").on("submit", function (event) {
@@ -38,6 +39,16 @@
                     console.log("Enjoy!");
                     location.reload();
                 })
+            })
+            $(".delete-burger").on("click", function(event) {
+                var id = $(this).data("id");
+                //send the delete request
+                    $.ajax("api/burgers/" + id, {
+                        type: "DELETE"
+                    }).then(() => {
+                        console.log("Deleted Burger", id);
+                        location.reload();
+                    })
             })
         });
     </script>

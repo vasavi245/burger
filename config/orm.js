@@ -10,7 +10,7 @@ var orm = {
         })
     },
     insertOne: function(table, col, val, callback){
-        var queryString = `INSERT INTO ${table}, ${col} VALUES ${val}`;
+        var queryString = `INSERT INTO ${table} (${col}) VALUES ("${val}");`;
         console.log(queryString);
         connection.query(queryString, function(err,res){
             if(err) throw err;
@@ -24,7 +24,18 @@ var orm = {
             if(err) throw err;
             callback(res);
         })
+    },
+    deleteOne: function(table, condition, callback){
+        var queryString = "DELETE FROM " + table;
+         queryString += " WHERE ";
+         queryString += condition;
+
+        connection.query(queryString, function(err, result){
+            if(err) throw err;
+            callback(result);
+        })
     }
+
 
 
 };
